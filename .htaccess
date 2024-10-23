@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    # Use PHP 8.2
+    AddHandler application/x-httpd-php82 .php
+    
+    RewriteEngine On
+    
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+
+
+
+
